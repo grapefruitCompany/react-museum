@@ -1,0 +1,45 @@
+@import '../../Styles/main.scss';
+
+.select-filter {
+  display: flex;
+  max-width: 900px;
+
+  &__input {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    font-size: $font-size;
+    padding: 5px 0px;
+    margin-right: 15px;
+    color: $primary-color;
+    cursor: pointer;
+    pointer-events: auto;
+
+    @media screen and (max-width: 725px) {
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+
+    @media screen and (max-width: 460px) {
+      width: 150px;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: 140px;
+    }
+
+    &--disabled {
+      border-color: $disabled-color;
+      color: $disabled-color;
+      cursor: auto;
+      pointer-events: none;
+    }
+  }
+}
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//  IE10+ CSS styles go here 
+
+
+// @supports (-ms-ime-align: auto) {
+// /* MS Edge CSS styles go here */

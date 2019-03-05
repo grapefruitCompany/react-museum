@@ -1,0 +1,53 @@
+@import '../../Styles/main.scss';
+
+.paginator {
+
+  &__item {
+    outline: 0;
+    border: 0;
+    padding: 5px;
+    background-color: transparent;
+    font-weight: bold;
+    transition: all .5s;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $hover-text-color;
+      background-color: $primary-color; 
+    }
+
+    &:active {
+      color: $primary-color-active;
+    }    
+
+    &--current {
+      color: $hover-text-color;
+      background-color: $primary-color;
+      pointer-events: none;  
+    }
+
+    &--disabled {
+      color: $disabled-color;
+      pointer-events: none;
+
+      &:hover {
+        color: $disabled-color;
+        background-color: transparent;   
+      }
+    }
+  }
+
+  &__dots {
+    outline: 0;
+    padding: 5px;
+    background-color: transparent;
+    border: 0;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}

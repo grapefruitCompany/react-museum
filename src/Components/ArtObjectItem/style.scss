@@ -1,0 +1,59 @@
+@import '../../Styles/main.scss';
+
+.art-objects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+  @media screen and (max-width: 530px) {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__img {
+    width: 200px;
+    @media screen and (max-width: 530px) {
+      width: 300px;
+    }
+  }
+
+  &__no-matches {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  &__title {
+    position: absolute;
+    padding: 10px 5px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    color: #ffffff;
+    font-size: $font-size;
+    vertical-align: center;
+    transform: translateY(0);
+    transition: all .5s;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      
+      & .art-objects__title {
+        transform: translateY(-105%);
+      }
+    }
+  }
+}

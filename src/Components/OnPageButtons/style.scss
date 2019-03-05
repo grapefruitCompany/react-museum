@@ -1,0 +1,32 @@
+@import '../../Styles/main.scss';
+
+.btn-on-page {
+  font-weight: bold;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  outline: none;
+  transition: all .5s;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &--current {
+    color: $hover-text-color;      
+    background-color: $primary-color;
+    pointer-events: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: $hover-text-color;
+    background-color: $primary-color;
+  }
+
+  &:active {
+    color: $primary-color-active;
+  }
+}
